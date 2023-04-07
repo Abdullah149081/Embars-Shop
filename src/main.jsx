@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 import Home from "./components/Home/Home";
 import Main from "./components/Layout/Main";
+import Order from "./components/Order/Order";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("tshirt.json"),
+      },
+      {
+        path: "order",
+        element: <Order></Order>,
       },
     ],
   },
