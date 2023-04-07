@@ -38,7 +38,8 @@ const Home = () => {
         <div className="sticky top-28">
           <div className="border-2 py-7 pl-6 rounded-lg md:w-96">
             <h2 className="text-lg font-bold mb-6">Order Summary</h2>
-            <p>Add to Cart: {carts.length}</p>
+            {carts.length === 0 ? <p className="text-2xl font-bold">Please Add Product</p> : <p className="text-2xl font-bold"> Thank You</p>}
+            <p className="mt-4">Add to Cart: {carts.length}</p>
             {carts.map((cart, index) => (
               <Cart cart={cart} key={index} handlerRemove={handlerRemove}></Cart>
             ))}
