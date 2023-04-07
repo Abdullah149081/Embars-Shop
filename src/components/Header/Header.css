@@ -1,0 +1,9 @@
+.nav {
+  height: 80px;
+
+  display: flex;
+}
+
+.nav a:hover {
+  color: #ff9900;
+}
