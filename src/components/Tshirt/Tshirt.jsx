@@ -1,6 +1,6 @@
 import React from "react";
 
-const Tshirt = ({ tshirt }) => {
+const Tshirt = ({ tshirt, handlerAddCart }) => {
   const { price, _id, name, gender, picture } = tshirt;
   return (
     <div className="mt-32">
@@ -15,7 +15,9 @@ const Tshirt = ({ tshirt }) => {
           </p>
           <p className="text-lg font-semibold">Gender : {gender}</p>
           <div className="mt-6 text-center">
-            <button className="btn btn-primary">Buy Now</button>
+            <button onClick={() => handlerAddCart(tshirt)} className="btn btn-primary">
+              Buy Now
+            </button>
           </div>
         </div>
       </div>
