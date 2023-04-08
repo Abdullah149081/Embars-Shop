@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="md:sticky top-0">
+      <div className="md:sticky top-0 z-10">
         <nav className="lg:px-32 nav justify-between items-center pl-4 bg-gray-800 ">
           <div>
             <Link to="/">
